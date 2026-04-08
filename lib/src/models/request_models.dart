@@ -13,7 +13,11 @@ class ResponseFormat {
 
   const ResponseFormat._(this.type, [this.jsonSchema]);
 
-  factory ResponseFormat.jsonObject() => const ResponseFormat._("json_object");
+  factory ResponseFormat.text() => const ResponseFormat._('text');
+
+  factory ResponseFormat.json() => const ResponseFormat._('json_object');
+
+  factory ResponseFormat.jsonObject() => const ResponseFormat._('json_object');
 
   factory ResponseFormat.jsonSchema({
     required String name,
@@ -24,6 +28,13 @@ class ResponseFormat {
     "strict": strict,
     "schema": schema,
   });
+
+  factory ResponseFormat.fromJson(Map<String, dynamic> json) {
+    return ResponseFormat._(
+      json['type'] as String,
+      json['json_schema'] as Map<String, dynamic>?,
+    );
+  }
 
   Map<String, dynamic> toJson() => {
     "type": type,

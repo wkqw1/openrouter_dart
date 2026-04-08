@@ -1,7 +1,7 @@
 name: openrouter_dart
 description: A Dart client for OpenRouter API. Supports Chat, Streaming, Tools, Vision, Embeddings, and Reranking.
-version: 1.0.0
-repository: https://github.com/my_org/my_repo
+version: 1.0.1
+repository: https://github.com/wkqw1/openrouter_dart
 
 environment:
   sdk: ^3.11.4
