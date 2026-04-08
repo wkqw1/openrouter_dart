@@ -1,6 +1,6 @@
 import "package:test/test.dart";
 import "package:dio/dio.dart";
-import "package:openrouter_dart/openrouter.dart";
+import "package:openrouter_dart/openrouter_dart.dart";
 import "test_utils.dart";
 
 void main() {
